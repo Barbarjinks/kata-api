@@ -6,7 +6,7 @@ describe('/strings', () => {
         .end((err, res) => {
           expect(err).to.equal(null);
           expect(res.status).to.equal(200);
-          expect(res.body).to.eql({ result: 'Hello world!' });
+          expect(res.body).to.eql({ result: 'Hello, world!' });
           done();
         });
     });
@@ -26,7 +26,7 @@ describe('/strings', () => {
   });
 
   describe('GET /lower/{string}', () => {
-    xit('returns the lowercased string', (done) => {
+    it('returns the lowercased string', (done) => {
       chai.request(server)
         .get('/strings/lower/HELLO')
         .end((err, res) => {
