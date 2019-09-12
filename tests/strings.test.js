@@ -1,6 +1,6 @@
 describe('/strings', () => {
   describe('GET /hello/{string}', () => {
-    xit('returns "Hello world!" when passed "world"', (done) => {
+    it('returns "Hello world!" when passed "world"', (done) => {
       chai.request(server)
         .get('/strings/hello/world')
         .end((err, res) => {
@@ -13,7 +13,7 @@ describe('/strings', () => {
   });
 
   describe('GET /upper/{string}', () => {
-    xit('returns the uppercased string', (done) => {
+    it('returns the uppercased string', (done) => {
       chai.request(server)
         .get('/strings/upper/hello')
         .end((err, res) => {
